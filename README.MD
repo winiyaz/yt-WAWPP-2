@@ -8,7 +8,8 @@ https://github.com/winiyaz/yt-WAWPP
 
 # PantyBranches 
 
-w1 - Work done here 
-expt1 - Experiments here 
+1. w1 - Work done here 
+2. expt1 - Experiments here 
+3. kagglez pushing to main
 
 - Doing it this way to not get confused with shiz
