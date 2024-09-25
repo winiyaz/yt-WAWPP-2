@@ -23,13 +23,15 @@ def func1():
         page = browser.new_page(user_agent=uA)
 
         # Opening New Page
-        rprint(f"[green3][OK] Go to page - {urls[0]}[/green3]")
         page.goto(urls[0], timeout=0)
+        rez = page.goto(urls[0], timeout=0)
+        rezStatus = rez.status
+        rprint(f"[green3][OK] Go to page - {urls[0]} - {rezStatus}[/green3]")
 
         #  Grabbing information
-        rprint(f"[green3][OK] Grab Title{urls[0]}[/green3]")
+        rprint(f"[green3][OK] Grab Title - {urls[0]}[/green3]")
         rprint(page.title())
 
         # Closing Browser
-        rprint(f"[gold3][OK] Shutdown Browser[/gold3]")
+        rprint("[gold3][OK] Shutdown Browser[/gold3]")
         browser.close()
