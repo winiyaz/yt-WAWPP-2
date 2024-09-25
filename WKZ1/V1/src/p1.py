@@ -28,7 +28,7 @@ def func1():
         rezStatus = rez.status
         rprint(f"[green3][OK] Go to page - {urls[0]} - {rezStatus}[/green3]")
 
-        #  Grabbing information
+        #  Actions on Page
         rprint(f"[green3][OK] Grab Title - {urls[0]}[/green3]")
         rprint(page.title())
 
