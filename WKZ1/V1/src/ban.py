@@ -15,3 +15,13 @@ def banner(txt):
     )
     # Print the Panel
     console.print(panel)
+
+
+def banner2(txt):
+    panel = Panel.fit(
+        txt,
+        style="Italic",
+        border_style="magenta",
+    )
+    # Print the Panel
+    console.print(panel)
