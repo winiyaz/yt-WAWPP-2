@@ -1,5 +1,5 @@
 from rich.traceback import install
-from src.ban import banner
+from src.utils.ban import banner
 from src.p2 import func2
 
 install(show_locals=True)
