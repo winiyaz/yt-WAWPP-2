@@ -76,5 +76,5 @@ def func24():
             browser.close()
             progress.update(task, completed=100)
         rprint(
-            f"[gold3][OK] Browser closed in {time.time() - start_time:.2f} seconds[/green3]"
+            f"[gold3][OK] Browser closed in {time.time() - start_time:.2f} seconds[/gold3]"
         )
