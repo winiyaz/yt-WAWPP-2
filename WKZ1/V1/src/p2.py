@@ -32,13 +32,13 @@ def func2():
         rprint(f"[green3][OK] Grab Title - {urls[0]}[/green3]")
         rprint(page.title())
 
-        # Further Actions on page
-        # Locate and click the "Learn Crypto" link
-        learn_crypto_link = page.query_selector(
-            'a[href="/learn"].tw-flex.tw-items-center.tw-py-3.tw-px-2.tw-rounded-lg.tw-font-semibold.tw-text-gray-700.tw-text-sm'
-        )
-        if learn_crypto_link:
-            learn_crypto_link.click()
+        # # Further Actions on page
+        # # Locate and click the "Learn Crypto" link
+        # learn_crypto_link = page.query_selector(
+        #     'a[href="/learn"].tw-flex.tw-items-center.tw-py-3.tw-px-2.tw-rounded-lg.tw-font-semibold.tw-text-gray-700.tw-text-sm'
+        # )
+        # if learn_crypto_link:
+        #     learn_crypto_link.click()
 
         # Create sreenshot - wih current date time
         page.screenshot(path=f"clicks/{c_d}-s1.png", full_page=True)
