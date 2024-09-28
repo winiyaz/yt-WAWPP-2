@@ -16,7 +16,7 @@ uA = "Mozilla/5.0 (Linux; Android 11; Redmi Note 8 Pro) AppleWebKit/537.36 (KHTM
 c_d = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
 
 
-def func4():
+def func5():
     with sync_playwright() as p:
         rprint("[blue1][OK] Starting Playwright Script...[/blue1]")
 
@@ -77,13 +77,11 @@ def func4():
         # Wait for the search input field to appear (adjust the selector as needed)
         # Type the search term into the input element
         search_bar.type("SmellPanty")
+        page.wait_for_load_state("networkidle")
         # Press the Enter key
-        search_bar.press("Enter")
         # Optionally, wait for the search results to load
         # page.wait_for_selector("your_search_results_selector")
         rprint(f"[yellow2][OK] url = {page.url}  [/yellow2]")
-
-        # ---
 
         # Create sreenshot - wih current date time
         page.screenshot(path=f"clicks/{c_d}-s1.png", full_page=True)
