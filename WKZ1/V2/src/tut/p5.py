@@ -52,28 +52,35 @@ def func5():
         # Further Actions on page
         # Locate element called Cryptocurrencies and do a sublick
         rprint("[orange1][OK] LickingPussy....[/orange1]")
+        # Ente Site
         link = page.locator('a[href="#enter"].btn-enter.s_enter')
         link.click()
+        # Go to Categories
+        rprint("[orange1][OK] LickingPussy.... GoTo-Categories[/orange1]")
         link = page.get_by_role("link", name="Categories")
         link.click()
+        rprint(f"[yellow2][OK] url = {page.url}  [/yellow2]")
+        # Go to Armpits Category
+        rprint("[orange1][OK] LickingPussy.... GoTo-Armpits[/orange1]")
         link = page.locator('a[href="#enter"].btn-enter.s_enter')
         link = page.get_by_role("link", name="Armpit")
         link.click()
-        link = page.locator('a[href="#enter"].btn-enter.s_enter')
-        # Click the link with the specific href attribute and containing an image with the specific alt attribute
+        page.wait_for_load_state("networkidle")
+        rprint(f"[yellow2][OK] url = {page.url}  [/yellow2]")
+        # Go TO Bella
         link = page.locator(
             'a[href="https://megasite.meanworld.com/updates/Bad-Bella-Slave-Orders.html"] img[alt="2304_badbella_slaveorders"]'
         )
         link.click()
-        # Optionally, wait for the new page to load or any specific element to appear
-        page.wait_for_load_state("networkidle")
-        link = page.locator('a[href="#enter"].btn-enter.s_enter')
-
-        # Optionally, wait for the new page to load or any specific element to appear
         page.wait_for_load_state("networkidle")
         rprint(f"[yellow2][OK] url = {page.url}  [/yellow2]")
-
-        # ---
+        # Open Video
+        link = page.locator(
+            'a[onclick="tload(\'/trailers/badbella_slaveorders_tr.mp4\', this)"] img[src="images/play.png"]'
+        )
+        link.click()
+        page.wait_for_load_state("networkidle")
+        rprint(f"[yellow2][OK] url = {page.url}  [/yellow2]")
 
         # Create sreenshot - wih current date time
         page.screenshot(path=f"clicks/{c_d}-s1.png", full_page=True)
