@@ -62,11 +62,14 @@ def func3():
         )
 
         rprint("[orange1][OK] LickingPussy....GoToPage[/orange1]")
-        cry_button = page.get_by_role("button", name="Cryptocurrencies")
+        cry_button = page.get_by_text("Cryptocurrencies").first
         cry_button.click()
+        by_mark = page.get_by_text("Chains").first
+        by_mark.click()
 
         # Printing the URL
-        rprint(f"[yellow2][OK] url = {page.url}  [/yellow2]")
+        rprint(f"[yellow2][OK] url = {cry_button.url}  [/yellow2]")
+        rprint(f"[yellow2][OK] url = {by_mark.url}  [/yellow2]")
 
         # Create sreenshot - wih current date time
         page.screenshot(path=f"clicks/{c_d}-s1.png", full_page=True)
