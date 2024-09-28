@@ -1,14 +1,14 @@
 from rich.traceback import install
 from src.utils.ban import banner
-from src.tut.p3 import func3
+from src.tut.p4 import func4
 
 
 install(show_locals=True)
 
 
 def main():
-    banner("Running Func22")
-    func3()
+    banner("Running p4.py - func4")
+    func4()
 
 
 if __name__ == "__main__":
