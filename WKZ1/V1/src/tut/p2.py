@@ -51,11 +51,13 @@ def func2():
         # Further Actions on page
         # Locate element called Cryptocurrencies and do a sublick
         rprint("[orange1][OK] LickingPussy....[/orange1]")
+        # page.set_default_timeout(200)
         page.click(
             'div.nav-label.dark\\:\\!tw-text-moon-50.tw-text-gray-700.dark\\:tw-text-moon-100.tw-font-semibold.tw-text-sm.tw-leading-5 >> text="Cryptocurrencies"'
         )
-        page.waitForSelector('a.sub-link-class:has-text("By Market Cap")')
-        page.click('a.sub-link-class:has-text("By Market Cap")')
+        page.click(
+            'a.dark\\:tw-text-moon-100.dark\\:hover\\:tw-bg-moon-700.dark\\:hover\\:tw-text-moon-50.hover\\:tw-bg-gray-100.hover\\:tw-text-gray-900.tw-flex.tw-items-center.tw-py-3.tw-px-2.tw-rounded-lg.tw-font-semibold.tw-text-gray-700.tw-text-sm >> text="By Market Cap"'
+        )
 
         # Create sreenshot - wih current date time
         page.screenshot(path=f"clicks/{c_d}-s1.png", full_page=True)
