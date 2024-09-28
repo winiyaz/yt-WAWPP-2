@@ -12,6 +12,16 @@ uv run playwright install
 
 [`Standard Colors for Rich`](https://rich.readthedocs.io/en/stable/appendix/colors.html?highlight=colors)
 
+# Dira 
+
+1. Files are inside [`src`](./src/) which are actual python files which are then called in [`panty.py`](./panty.py) Enjoy strong women ass and pussy smells. 
+
+Directory | Description
+--- | --- 
+[`src/tut`](./src/tut/) | Actual tutorial python files here. Each video work is but as its own numbered python file here
+[`src/exp`](./src/exp/) | While doing the work on tutorial you ran all experiments here. You will see double numbering which means it is an experiment
+
+
 # File Description 
 
 File | Pussy 
