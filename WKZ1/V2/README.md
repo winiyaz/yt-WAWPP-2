@@ -1,4 +1,10 @@
-# V1 
+# V2
+
+This is for working with this site 
+
+```sh 
+https://megasite.meanworld.com/
+```
 
 # Regarding install 
 
