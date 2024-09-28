@@ -9,14 +9,13 @@ import os
 # --- User Agent and Websites ---
 URLS = [
     "https://www.coingecko.com/",
-    "https://www.femscat.com/main.php",
-    "https://www.meanbitches.com/",
+    "https://megasite.meanworld.com/",
 ]
 uA = "Mozilla/5.0 (Linux; Android 11; Redmi Note 8 Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Mobile Safari/537.36"
 c_d = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
 
 
-def func4():
+def func5():
     with sync_playwright() as p:
         rprint("[blue1][OK] Starting Playwright Script...[/blue1]")
 
@@ -39,48 +38,39 @@ def func4():
         page = context.new_page()
 
         # Opening New Page
-        page.goto(URLS[0], timeout=0)
+        page.goto(URLS[1], timeout=0)
 
         # Define the url here the array is being accessed from the variable URLS
-        rez = page.goto(URLS[0], timeout=0)
+        rez = page.goto(URLS[1], timeout=0)
         rezStatus = rez.status
-        rprint(f"[green3][OK] Go to page - {URLS[0]} - {rezStatus}[/green3]")
+        rprint(f"[green3][OK] Go to page - {URLS[1]} - {rezStatus}[/green3]")
 
         #  Actions on Page
-        rprint(f"[green3][OK] Grab Title - {URLS[0]}[/green3]")
+        rprint(f"[green3][OK] Grab Title - {URLS[1]}[/green3]")
         rprint(page.title())
 
         # Further Actions on page
         # Locate element called Cryptocurrencies and do a sublick
         rprint("[orange1][OK] LickingPussy....[/orange1]")
-        # page.set_default_timeout(200)
-        page.click(
-            'div.nav-label.dark\\:\\!tw-text-moon-50.tw-text-gray-700.dark\\:tw-text-moon-100.tw-font-semibold.tw-text-sm.tw-leading-5 >> text="Cryptocurrencies"'
+        link = page.locator('a[href="#enter"].btn-enter.s_enter')
+        link.click()
+        link = page.get_by_role("link", name="Categories")
+        link.click()
+        link = page.locator('a[href="#enter"].btn-enter.s_enter')
+        link = page.get_by_role("link", name="Armpit")
+        link.click()
+        link = page.locator('a[href="#enter"].btn-enter.s_enter')
+        # Click the link with the specific href attribute and containing an image with the specific alt attribute
+        link = page.locator(
+            'a[href="https://megasite.meanworld.com/updates/Bad-Bella-Slave-Orders.html"] img[alt="2304_badbella_slaveorders"]'
         )
-        page.click(
-            'a.dark\\:tw-text-moon-100.dark\\:hover\\:tw-bg-moon-700.dark\\:hover\\:tw-text-moon-50.hover\\:tw-bg-gray-100.hover\\:tw-text-gray-900.tw-flex.tw-items-center.tw-py-3.tw-px-2.tw-rounded-lg.tw-font-semibold.tw-text-gray-700.tw-text-sm >> text="By Market Cap"'
-        )
-        rprint(f"[yellow2][OK] url = {page.url}  [/yellow2]")
+        link.click()
+        # Optionally, wait for the new page to load or any specific element to appear
+        page.wait_for_load_state("networkidle")
+        link = page.locator('a[href="#enter"].btn-enter.s_enter')
 
-        rprint("[orange1][OK] LickingPussy....GoToPage[/orange1]")
-        cry_button = page.get_by_text("Cryptocurrencies").first
-        cry_button.click()
-        by_mark = page.get_by_text("Chains").first
-        by_mark.click()
-        rprint(f"[yellow2][OK] url = {page.url}  [/yellow2]")
-
-        # --- clicking search term
-        rprint("[orange1][OK] LickingPussy....SearchPanty[/orange1]")
-        # Locate and click the search bar to trigger the search popup
-        search_bar = page.locator("div#search-bar")
-        search_bar.click()
-        # Wait for the search input field to appear (adjust the selector as needed)
-        # Type the search term into the input element
-        search_bar.type("SmellPanty")
-        # Press the Enter key
-        search_bar.press("Enter")
-        # Optionally, wait for the search results to load
-        # page.wait_for_selector("your_search_results_selector")
+        # Optionally, wait for the new page to load or any specific element to appear
+        page.wait_for_load_state("networkidle")
         rprint(f"[yellow2][OK] url = {page.url}  [/yellow2]")
 
         # ---
