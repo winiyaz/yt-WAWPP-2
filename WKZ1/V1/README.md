@@ -20,7 +20,7 @@ Directory | Description
 --- | --- 
 [`src/tut`](./src/tut/) | Actual tutorial python files here. Each video work is but as its own numbered python file here
 [`src/exp`](./src/exp/) | While doing the work on tutorial you ran all experiments here. You will see double numbering which means it is an experiment
-
+[`webz`](./webz/) | Targeting information of the website
 
 # File Description 
 

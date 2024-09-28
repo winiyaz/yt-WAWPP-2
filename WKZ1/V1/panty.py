@@ -1,6 +1,6 @@
 from rich.traceback import install
 from src.utils.ban import banner
-from src.exp.p24 import func24
+from src.tut.p2 import func2
 
 
 install(show_locals=True)
@@ -8,7 +8,7 @@ install(show_locals=True)
 
 def main():
     banner("Running Func22")
-    func24()
+    func2()
 
 
 if __name__ == "__main__":

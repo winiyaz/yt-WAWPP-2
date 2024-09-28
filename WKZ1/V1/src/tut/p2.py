@@ -2,9 +2,10 @@
 from playwright.sync_api import sync_playwright
 from datetime import datetime, timezone
 from rich import print as rprint  # For rprinting
+import os
 
 # --- User Agent and Websites ---
-urls = [
+URLS = [
     "https://www.coingecko.com/",
     "https://www.femscat.com/main.php",
     "https://www.meanbitches.com/",
@@ -23,22 +24,18 @@ def func2():
         page = browser.new_page(user_agent=uA)
 
         # Opening New Page
-        page.goto(urls[0], timeout=0)
-        rez = page.goto(urls[0], timeout=0)
+        page.goto(URLS[0], timeout=0)
+
+        # Define the url here the array is being accessed from the variable URLS
+        rez = page.goto(URLS[0], timeout=0)
         rezStatus = rez.status
-        rprint(f"[green3][OK] Go to page - {urls[0]} - {rezStatus}[/green3]")
+        rprint(f"[green3][OK] Go to page - {URLS[0]} - {rezStatus}[/green3]")
 
         #  Actions on Page
-        rprint(f"[green3][OK] Grab Title - {urls[0]}[/green3]")
+        rprint(f"[green3][OK] Grab Title - {URLS[0]}[/green3]")
         rprint(page.title())
 
-        # # Further Actions on page
-        # # Locate and click the "Learn Crypto" link
-        # learn_crypto_link = page.query_selector(
-        #     'a[href="/learn"].tw-flex.tw-items-center.tw-py-3.tw-px-2.tw-rounded-lg.tw-font-semibold.tw-text-gray-700.tw-text-sm'
-        # )
-        # if learn_crypto_link:
-        #     learn_crypto_link.click()
+        # Further Actions on page
 
         # Create sreenshot - wih current date time
         page.screenshot(path=f"clicks/{c_d}-s1.png", full_page=True)
@@ -46,3 +43,7 @@ def func2():
         # Closing Browser
         rprint("[gold3][OK] Shutdown Browser[/gold3]")
         browser.close()
+
+        # View new files in directory
+        rprint("[blue1][OK] View new files in directory...[/blue1]")
+        os.system("ls -alh clicks")
