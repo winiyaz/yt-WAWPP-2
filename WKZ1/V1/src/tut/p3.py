@@ -60,16 +60,30 @@ def func3():
         page.click(
             'a.dark\\:tw-text-moon-100.dark\\:hover\\:tw-bg-moon-700.dark\\:hover\\:tw-text-moon-50.hover\\:tw-bg-gray-100.hover\\:tw-text-gray-900.tw-flex.tw-items-center.tw-py-3.tw-px-2.tw-rounded-lg.tw-font-semibold.tw-text-gray-700.tw-text-sm >> text="By Market Cap"'
         )
+        rprint(f"[yellow2][OK] url = {page.url}  [/yellow2]")
 
         rprint("[orange1][OK] LickingPussy....GoToPage[/orange1]")
         cry_button = page.get_by_text("Cryptocurrencies").first
         cry_button.click()
         by_mark = page.get_by_text("Chains").first
         by_mark.click()
+        rprint(f"[yellow2][OK] url = {page.url}  [/yellow2]")
 
-        # Printing the URL
-        rprint(f"[yellow2][OK] url = {cry_button.url}  [/yellow2]")
-        rprint(f"[yellow2][OK] url = {by_mark.url}  [/yellow2]")
+        # --- clicking search term
+        rprint("[orange1][OK] LickingPussy....SearchPanty[/orange1]")
+        # Locate and click the search bar to trigger the search popup
+        search_bar = page.locator("div#search-bar")
+        search_bar.click()
+        # Wait for the search input field to appear (adjust the selector as needed)
+        # Type the search term into the input element
+        search_bar.type("SmellPanty")
+        # Press the Enter key
+        search_bar.press("Enter")
+        # Optionally, wait for the search results to load
+        # page.wait_for_selector("your_search_results_selector")
+        rprint(f"[yellow2][OK] url = {page.url}  [/yellow2]")
+
+        # ---
 
         # Create sreenshot - wih current date time
         page.screenshot(path=f"clicks/{c_d}-s1.png", full_page=True)
