@@ -23,6 +23,19 @@ def func2():
         browser = p.chromium.launch()
         page = browser.new_page(user_agent=uA)
 
+        # Recording video
+        # Rectording Viedo ACtions
+        rprint("[orange1][OK] StartRecording...[/orange1]")
+        context_config = {
+            "record_video_dir": "clicks/",
+            "record_video_size": {"width": 640, "height": 480},
+            "user_agent": uA,
+            "locale": "de-DE",
+            "timezone_id": "Europe/Berlin",
+        }
+        context = browser.new_context(**context_config)
+        page = context.new_page()
+
         # Opening New Page
         page.goto(URLS[0], timeout=0)
 
@@ -36,6 +49,10 @@ def func2():
         rprint(page.title())
 
         # Further Actions on page
+        # Locate element called Cryptocurrencies
+        rprint("[orange1][OK] LickingPussy....[/orange1]")
+        page.get_by_role("Cryptocurrencies").click(timeout=300)
+        page.get_by_role("Categories").click(timeout=300)
 
         # Create sreenshot - wih current date time
         page.screenshot(path=f"clicks/{c_d}-s1.png", full_page=True)
